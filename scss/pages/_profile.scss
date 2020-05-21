@@ -1,0 +1,69 @@
+.profile-user-info {
+    display: flex;
+    align-items: center;
+    min-height: 35vh;
+    background-color: #f1f1f1;
+
+
+    &-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 2rem 4vw;
+
+        .profile-username {
+            font-size: 0.875rem;
+            color: $primary-color;
+        }
+
+        &-info {
+            max-width: 800px;
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 0.875rem;
+            }
+
+            .bio {
+                display: block;
+                margin: 1rem 0rem;
+                font-size: 1rem;
+            }
+
+            .profile-user-meta {
+                display: flex;
+                align-items: center;
+                font-size: 0.875rem;
+                margin-bottom: 1rem;
+
+                .profile-user-following {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &-img {
+            a {
+                display: block;
+                cursor: pointer;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+}
+
+.profile-user-posts {
+    display: flex;
+    justify-content: center;
+}

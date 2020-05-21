@@ -1,0 +1,51 @@
+.default-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-intro {
+    margin-bottom: 36px;
+
+    h1 {
+        position: relative;
+        display: inline-block;
+        color: #333333;
+        font-size: 36px;
+        font-weight: 600;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 6px;
+            background-color: #e44c2a;
+            top: 50%;
+            left: -20px;
+            margin-top: -5px;
+        }
+    }
+}
+
+.special-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}

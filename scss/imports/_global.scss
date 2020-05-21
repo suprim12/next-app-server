@@ -1,0 +1,91 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-color;
+        cursor: pointer;
+    }
+}
+
+button {
+    user-select: none;
+}
+
+button>* {
+    pointer-events: none;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.darkmodetoggle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #2962FF;
+    display: flex;
+    box-shadow: 0px 0px 4px 1px #0043ff;
+    cursor: pointer;
+}
+
+.site-main {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &.lightmode {
+        --background: #ffff;
+        --text: #333;
+        --nav: #fff;
+        --textsub: #111;
+        background-color: var(--background);
+        color: var(--text);
+    }
+
+    &.darkmode {
+        --background: #1c1c1c;
+        --nav: #272727;
+        --text: #EFEFEF;
+        --textsub: #EFEFEF;
+        background-color: var(--background);
+        color: var(--text);
+    }
+}
+
+body {
+    &.darkmode {
+        --background: #1c1c1c;
+        --nav: #272727;
+        --text: #EFEFEF;
+        --textsub: #EFEFEF;
+    }
+
+    background-color: var(--background);
+}

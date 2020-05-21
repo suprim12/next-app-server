@@ -1,0 +1,31 @@
+@import './imports/variables';
+@import './imports/global';
+@import './imports/utils';
+@import './imports/breakpoints';
+@import './imports/grid';
+@import './imports/form';
+@import './imports/btn';
+// LAYOUTS
+@import './layouts/header';
+@import './layouts/footer';
+// SECTIONS
+@import './sections/article_card';
+@import './sections/loadingbar';
+@import './sections/post_card';
+@import './imports/loader';
+// PAGES
+@import './sections/banner';
+@import './pages/login';
+@import './pages/profile';
+@import './sections/hero_section';
+@import './pages/home';
+
+// DASHBOARD
+@import './dashboard/dashboard_layout';
+
+// REACT TOSATIFY
+.Toastify__toast {
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

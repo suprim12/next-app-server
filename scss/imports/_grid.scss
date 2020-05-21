@@ -1,0 +1,190 @@
+/** 
+NAME: SUPRIM GRID SYSTEM
+AUTHOR: Suprim Golay
+AUTHOR URI: https://suprimgolay.com.np
+Version: 1.0
+LICENCE: FREE TO USE --- KEEP THE CREDIT..
+*----INFROMATION---*
+Max Container  width	None (auto)	540px	720px	960px	1140px
+Class prefix	.wrap-	.wrap-sm-	.wrap-md-	.wrap-lg-	.wrap-xl-
+**/
+$columns: 12;
+$gutter: 15px;
+$rowArr: ('1': '8.333%',
+    '2': '16.66666%',
+    '3': '25%',
+    '4': '33.33333%',
+    '5': '41.66666%',
+    '6': '50%',
+    '7': '58.33333%',
+    '8': '66.66666%',
+    '9': '75%',
+    '10': '83.33%',
+    '11': '91.66666%',
+    '12': '100%'
+);
+
+.wrapper {
+    width: 100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wrapper-fluid {
+    width: 100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+}
+
+.no-gutters>.wrap,
+.no-gutters>[class*='wrap-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.wrap {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@each $key,
+$value in $rowArr {
+    .wrap-#{$key} {
+        flex: 0 0 #{$value};
+        max-width: #{$value};
+    }
+}
+
+@each $key,
+$value in $rowArr {
+    .offset-#{$key} {
+        margin-left: #{$value};
+    }
+}
+
+[class*='wrap-'] {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter;
+    padding-left: $gutter;
+}
+
+// GRID RESPONSIVE
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+
+    @each $key,
+    $value in $rowArr {
+        .wrap-sm-#{$key} {
+            flex: 0 0 #{$value};
+            max-width: #{$value};
+        }
+    }
+
+    .hidden-only-xs {
+        display: block !important;
+    }
+
+    .d-sm-none {
+        display: none !important;
+    }
+
+    .d-sm-block {
+        display: block !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+
+    @each $key,
+    $value in $rowArr {
+        .wrap-md-#{$key} {
+            flex: 0 0 #{$value};
+            max-width: #{$value};
+        }
+    }
+
+    .d-md-none {
+        display: none !important;
+    }
+
+    .d-md-block {
+        display: block !important;
+    }
+
+    .hidden-only-sm {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+
+    @each $key,
+    $value in $rowArr {
+        .wrap-lg-#{$key} {
+            flex: 0 0 #{$value};
+            max-width: #{$value};
+        }
+    }
+
+    .d-lg-none {
+        display: none !important;
+    }
+
+    .d-lg-block {
+        display: block !important;
+    }
+
+    .hidden-only-md {
+        display: block !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1400px;
+    }
+
+    @each $key,
+    $value in $rowArr {
+        .wrap-xl-#{$key} {
+            flex: 0 0 #{$value};
+            max-width: #{$value};
+        }
+    }
+
+    .d-xl-none {
+        display: none !important;
+    }
+
+    .d-xl-block {
+        display: block !important;
+    }
+
+    .hidden-only-lg {
+        display: block !important;
+    }
+}

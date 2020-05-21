@@ -1,0 +1,99 @@
+.post-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 800px;
+
+    &-header {
+        display: flex;
+        align-items: flex-start;
+
+        .post-card-user-img {
+            display: block;
+            margin-right: 1rem;
+            width: 80px;
+            height: 70px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .post-card-user-info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .posts-meta {
+                display: flex;
+
+                span {
+                    display: inline-flex;
+                    margin-right: 1rem;
+                    font-size: 0.875rem;
+                }
+            }
+
+        }
+    }
+
+    &-body {
+        .post-card-img {
+            display: block;
+            height: 300px;
+            margin: 1rem 0rem;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .post-card-title {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .post-card-desc {
+            font-size: 1rem;
+        }
+
+        .post-card-read-more {
+            display: block;
+            margin: 1rem 0rem;
+            font-size: 0.875rem;
+            margin: 1rem 0rem;
+            color: $primary-color;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .post-card-action-like {
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .post-card-action-response {
+            font-size: 0.875rem;
+            color: $primary-color;
+        }
+    }
+}
